@@ -1,0 +1,103 @@
+
+
+rm defectselector 
+gcc -o defectselector defectselector.c -lm
+#need -lm to compile math .pow part of program
+
+#this function should run multiple tests with different processfiles and perhaps run comparision function
+
+#remove all statistics files, so can't get confused with old output
+rm *.stat  
+#rm antisite.list
+
+echo -en "\007"
+
+#echo -e "starting print out test,colltest1,57 \n"
+#./defectselector 2 full processpotdisp colltest0.dump 2     
+#echo -e " \n \n \nstarting search test joined3,4 \n" 
+#./defectselector 2 search processsearch joined0.dump 500
+#echo -e  " \n \n \nstarting threshold test joined5,6 \n" 
+#./defectselector 2 ethreshold processthreshold joined0.dump 0.5 
+#echo -e  "\n \n \nstarting singleatom test joined11,12 \n"
+#./defectselector 1 full processsinglefull joined11.dump 
+
+
+#echo -e  "\n \n \nstarting quantity keatom joined13,14,15 \n"
+#./defectselector 2 quantity processquantity joined0.dump keatom 637    
+#echo -e  "\n \n \nstarting quantity keatom joined16,17 \n"
+#./defectselector 1 ethreshold processthreshold2 joined11.dump 0.5
+
+    
+#echo -e  "\n \n \nstarting coordination colltest100 \n"
+#./defectselector 2 coordination processgb colltest100.dump 2    
+#echo -e "\n \n \n starting grf test tilt2,3 \n"
+#./defectselector 2 grf processgrf tilt2.dump 3 0.01 1  
+#echo -e "\n \n \n starting grf test tilt4,5 \n"
+#./defectselector 2 grf processgrfb tilt4.dump 6 0.05 1     
+#echo -e  "\n \n \nstarting fcc fcc1,2 \n"
+#./defectselector 1 grf processfcc fcc1.dump 3 0.05 1  
+#echo -e  "\n \n \nstarting bcc bcc1,2 \n"
+#./defectselector 1 grf processbcc bcc1.dump 3 0.05 1 
+#echo -e  "\n \n \nstarting sc sc1,2 \n"
+#./defectselector 1 grf processsc sc1.dump 3 0.05 1
+
+
+#echo -e "\n \n \n starting data processref alldefects colltest16,50000 \n"
+#./defectselector 2 alldefects processref colltest50000.dump 0 0
+#echo -e "\n \n \n starting data processref alldefects colltest16,50000 \n"
+#./defectselector 2 findSurf processref colltest50000.dump 0 antisite.list
+
+
+#echo -e "\n \n \n starting data processtemp meltcluster \n"
+#./defectselector 2 meltcluster processtemp colltest20000.dump 0 antisite.list 1600
+#echo -e "\n \n \n starting data processtemp tempdev \n"
+#./defectselector 2 tempdev processtemp colltest20000.dump 0 
+
+#echo -e "\n \n \n starting data processref latticedev \n"
+#./defectselector 2 latticedev processref colltest50000.dump 0 0.2 
+#echo -e "\n \n \n starting data processdefects dispscount \n"
+#./defectselector 2 dispsCount processdefects2 colltest100.dump 2 3 
+#echo -e "\n \n \n starting data processdefects readdisp \n"
+#./defectselector 2 readdisp processdefects2 colltest100.dump 2 
+
+#echo -e "\n \n \n starting data processref findCascade \n"
+#./defectselector 2 kecluster processref colltest50000.dump 1 0.4 6000 ke.list
+echo -e "\n \n \n starting data processref findlocOrder \n"
+./defectselector 2 locOrder processref colltest50000.dump 1 antisite.list
+
+
+#new defect finding method tester
+#echo -e "\n \n \n starting data processdefects2 alldefects2 colltest51,97 \n"
+#./defectselector 2 alldefects2 processdefects2 colltest100.dump 2 10.71
+
+#echo -e  "\n \n \nstarting alldefects test tilt6,7 \n"
+#./defectselector 2 alldefects processantisite tilt0.dump 1 0
+
+
+#echo -e  "\n \n \nstarting grf test colltest97,98 \n"
+#./defectselector 2 grf processdata colltest51.dump 3 0.01 1   
+#echo -e  "\n \n \nstarting list test colltest97,98 \n"
+#./defectselector 2 tlist processdata colltest51.dump 2800 
+#echo -e  "\n \n \nstarting grflist test colltest97,98 \n"
+#./defectselector 2 listgrf processdata colltest51.dump 5 0.01 colltest97.list 
+#mv colltest97grf.stat melt.stat
+
+#echo -e "\n \n \n starting data processdefects dispout colltest50,97000 \n"
+#./defectselector 2 dispout processdefects2 colltest100.dump 2 
+#echo -e "\n \n \n starting data processchains chains colltest100,230000 \n"
+#./defectselector 2 chains processchains colltest100.dump 2 
+
+
+#echo -e "\n \n \n starting data processpotdisp pedist colltest51,97 \n"
+#./defectselector 2 stressdist processpotdisp colltest0.dump 3.571
+ 
+#echo -e "\n \n \n starting data processneighvec neighvec colltest0 \n"
+#./defectselector 2 neighvec processneighvec colltest0.dump 1
+
+
+
+#bash update   #update this file in all chosen directories 
+
+echo -en "\007"
+echo -en "\007"
+

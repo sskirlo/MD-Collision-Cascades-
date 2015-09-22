@@ -1,0 +1,90 @@
+#purpose of code is to update all relevant code in all files
+
+
+fnme="defectselector"
+path="/home/sskirlo/data/ni3al/collisions/grainboundary/test/"
+path2="/home/sskirlo/data/ni3al/collisions/"
+path3="/home/sskirlo/data/ni3al/"
+path4="/home/sskirlo/data/"
+path5="/home/sskirlo/data/ni3al/collisions/grainboundary/"
+
+
+cp ${path}${fnme} ${path2}${fnme}   #copy to main folder
+f1="1kv/"
+cp ${path}${fnme} ${path2}${f1}${fnme}   #copy
+f1="ni1kv/" 
+cp ${path}${fnme} ${path2}${f1}${fnme}   #copy
+f1="ni1kv2/" 
+cp ${path}${fnme} ${path2}${f1}${fnme}   #copy
+f1="10kv/" 
+cp ${path}${fnme} ${path2}${f1}${fnme}   #copy
+f1="10kvb/"
+cp ${path}${fnme} ${path2}${f1}${fnme}
+f1="10kva/"
+cp ${path}${fnme} ${path2}${f1}${fnme}   #copy
+f1='cu1kv/'
+cp ${path}${fnme} ${path2}${f1}${fnme}
+f1='melt/'
+cp ${path}${fnme} ${path3}${f1}${fnme}
+cp ${path}${fnme} ${path3}${fnme}
+cp ${path}${fnme} ${path4}${fnme}
+cp ${path}${fnme} ${path5}${fnme}
+
+count=1 
+max=15
+while [ $count -le $max ]; do
+f1='g300/new/g300k'
+f5='g600/new/g600k'
+f6='g900/new/g900k'
+f7='300/300k'
+f8='600/600k'
+f9='900/900k'
+f10='g300/old/g300k'
+f11='g100/g100k'
+f12='100/100k'
+f13='g600/new2/g600k'
+
+
+f3='/'
+f2=$count
+f1=${f1}${f2}${f3}
+f5=${f5}${f2}${f3}
+f6=${f6}${f2}${f3}
+f7=${f7}${f2}${f3}
+f8=${f8}${f2}${f3}
+f9=${f9}${f2}${f3}
+f10=${f10}${f2}${f3}
+f11=${f11}${f2}${f3}
+f12=${f12}${f2}${f3}
+f13=${f13}${f2}${f3}
+
+echo ${f1}
+echo ${f5}
+echo ${f6}
+echo ${f7}
+echo ${f8}
+echo ${f9}
+echo ${f10}
+echo ${f11}
+echo ${f12}
+echo ${f13}
+cp ${path}${fnme} ${path2}${f1}${fnme} 
+cp ${path}${fnme} ${path2}${f5}${fnme} 
+cp ${path}${fnme} ${path2}${f6}${fnme} 
+cp ${path}${fnme} ${path2}${f7}${fnme} 
+cp ${path}${fnme} ${path2}${f8}${fnme} 
+cp ${path}${fnme} ${path2}${f9}${fnme}
+cp ${path}${fnme} ${path2}${f10}${fnme}
+cp ${path}${fnme} ${path2}${f11}${fnme}
+cp ${path}${fnme} ${path2}${f12}${fnme}
+cp ${path}${fnme} ${path2}${f13}${fnme}
+ 
+let count=count+1
+done
+
+#count=1
+#max=141
+#while [ $count -le $max ]; do
+#rm ${fnme}${count}${ext}
+#let count=count+1
+#done

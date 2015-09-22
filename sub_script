@@ -1,0 +1,16 @@
+#$ -cwd
+#$ -S /bin/sh
+#$ -V
+#$ -pe orte 8
+#$ -N onekevcoll
+#$ -m be
+###$ -l h_rt=00:20:00
+#$ -M sskirlo@mit.edu
+#outfile=all.nodelist.`date +%m%d-%H:%M`.out
+echo $NSLOTS
+echo $TMPDIR
+
+/share/apps/openmpi/bin/mpirun -np $NSLOTS /share/apps/bin/lmp_220311 -in in.Ni3al_sides -log log.Ni3al_sides
+
+
+
